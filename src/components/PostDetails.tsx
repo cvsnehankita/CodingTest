@@ -1,9 +1,10 @@
-import React from 'react'
-
-export default function PostDetails() {
+import { useParams } from 'react-router-dom';
+ 
+const PostDetails: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
   return (
-    <div>
-      <h1>Post details</h1>
+    <div className="container mt-4">
+      <h2>Welcome to post: {id}</h2>
     </div>
-  )
-}
+  );
+};
